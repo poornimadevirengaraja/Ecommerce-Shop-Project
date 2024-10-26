@@ -1,0 +1,35 @@
+((1) Log4j
+1. copy log4j.xml in your project folder
+2. Add log class in utility package
+3. create a folder Logs in your project folder and add the folder path in log4j.xml   
+<param name="File" value="Logs/log4j.log"/>
+4. Add a before suite method in base class
+@BeforeSuite
+	public void logsbeforesuite() {
+		DOMConfigurator.configure("log4j.xml");
+	}
+5. call the methods of log4j in all your testcases
+
+
+
+((2) Data Driven testing and Data Provider
+1. Add excel library in utility package
+2. create a folder and add testdata.xls in that
+3. create a package of dataprovider and add dataprovider class and create an object of excel library class
+4. Add data provider methods
+5.call the data provider methods from testcases
+
+((3) Extent report
+
+1. Add or create extent-config.xml file for configuration
+2. Add or create ExtentManager class in utility package
+3. create a folder or save Extent Report under test output
+4. configure ExtentManager.setExtent() in @BeforeSuite in base class
+5. Configure ExtentManger.endReport() in @AfterSuite in base class
+6.Add/ create screen shot in extent report
+--> Add / create a Listener class --> Listenerclass.java
+7.To call the Listener Add the below listener( inside suite tag) testing.xml
+
+<listeners>
+		<listener class-name="com.store.utilities.ListenerClass"></listener>
+	</listeners>

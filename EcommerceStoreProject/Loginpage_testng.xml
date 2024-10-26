@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Searchresultpagetest Suite">
+	<listeners>
+		<listener class-name="com.store.utilities.ListenerClass"></listener>
+	</listeners>
+	<test name="Searchresultpagetest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.store.testcases.Searchresultpagetest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
